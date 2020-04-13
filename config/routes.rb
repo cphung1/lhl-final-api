@@ -1,15 +1,22 @@
 Rails.application.routes.draw do
-  get 'events/show' => 'events#show'
-  get 'events/index' => 'events#index'
 
-  
+  #get 'user_event/show'
+  scope '/api' do
+    resources :user_event, only: [:show, :create, :destroy]
+  end
+
+
+  #get 'events/show' => 'events#show'
+  #get 'events/index' => 'events#index'
+
+
   scope '/api' do
     resources :events, only: [:index, :show]
   end
 
 
-  get 'users/show' => 'events#show'
-  get 'users/index' => 'users#index'
+  #get 'users/show' => 'events#show'
+  #get 'users/index' => 'users#index'
   
   scope '/api' do
     resources :users, only: [:index, :show]

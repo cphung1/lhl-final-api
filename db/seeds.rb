@@ -55,3 +55,27 @@ end
 
   User.create(name: "Kristen Kirby", image: open_asset('kirby.jpg'), description: "I love outdoor events", location: "New York, NY", email: "kirby@gmail.com", password: "kirby", birthdate: "Feb 2, 1997")
 
+  puts "EVENT for single USER"
+
+  UserEvent.create(event_id: 1, user_id: 1)
+
+  p UserEvent.all()
+
+  #myevent1 = Event.find(1)
+
+  #user1 = User.find(1)
+  #user1.events << myevent1
+  #user1.save
+
+  #puts "First test" 
+  #p user1
+  #outputs
+  #<User id: 1, name: "Adam Baynes", image: "#<File:0x00000000029ab670>", description: "I really enjoy trance, dubstep, trap, hardstyle an...", location: "Vancouver, BC", email: "abaynes@gmail.com", password: "adam", birthdate: "1995-07-02", created_at: "2020-04-13 21:00:52", updated_at: "2020-04-13 21:00:52">
+
+  #puts "second test"
+  #p user1.events
+  
+  #puts "Whole thing"
+  #p UserEvent.all()
+  #outputs
+  #[#<UserEvent id: 1, created_at: "2020-04-13 21:00:52", updated_at: "2020-04-13 21:00:52", user_id: 1, event_id: 1>]
