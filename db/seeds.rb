@@ -36,7 +36,7 @@ end
   )
 
   Event.create(
-    name: "Ultra Music Festival", details: "Commonly known as UMF, is an annual outdoor electronic music festival that is primarily been held at Bayfront Park in downtown Miami. It was founded in 1999 by Russell Faibisch and Alex Omes and is named after the 1997 Depeche Mode album, Ultra.", start_date: "Mar 26, 2021", end_date: "Mar 28, 2021", location: "Miami, Florida, USA"
+    name: "Electric Zoo", details: "Electric Zoo is an annual electronic music festival held over Labor Day weekend in New York City on Randall's Island. The festival represents all genres of electronic music.", start_date: "Sept 4, 2021", end_date: "Sept 6, 2021", location: "New York, New York, USA"
   )
   
  # User.create(name: "", image: open_asset('.jpg'), description: "", location: "", email: "", password: "", birthdate: "")
