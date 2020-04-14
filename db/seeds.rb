@@ -58,6 +58,7 @@ end
   # puts "EVENT for single USER"
 
   UserEvent.create(event_id: 1, user_id: 1)
+  UserEvent.create(event_id: 1, user_id: 2)
 
   UserEvent.create(event_id: 4, user_id: 1)
 
