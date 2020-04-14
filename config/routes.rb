@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
   #get 'user_event/show'
+
+  post 'login', to: 'auth#login'
+
   scope '/api' do
     resources :user_event, only: [:show, :create, :destroy]
   end
