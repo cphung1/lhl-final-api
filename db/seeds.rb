@@ -55,11 +55,13 @@ end
 
   User.create(name: "Kristen Kirby", image: open_asset('kirby.jpg'), description: "I love outdoor events", location: "New York, NY", email: "kirby@gmail.com", password: "kirby", birthdate: "Feb 2, 1997")
 
-  puts "EVENT for single USER"
+  # puts "EVENT for single USER"
 
   UserEvent.create(event_id: 1, user_id: 1)
 
-  p UserEvent.all()
+  UserEvent.create(event_id: 4, user_id: 1)
+
+  # p UserEvent.all()
 
   #myevent1 = Event.find(1)
 
