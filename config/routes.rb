@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   #get 'user_event/show'
   scope '/api' do
-    resources :user_event, only: [:show, :create, :destroy, :new]
+    resources :user_event, only: [:show, :create, :destroy]
   end
 
 

@@ -8,21 +8,12 @@ class UserEventController < ApplicationController
   end
 
   def create
-    # event = Event.find(params[:id])
-    # user1 = User.find(1)
-    # user1.events << event
-    # user1.save
-
     user_event = UserEvent.create(event_id: event_params, user_id: user_params)
     if user_event 
       render json: user_event
     else 
       puts "error"
     end
-  end
-  
-  def new 
-    @user_event = UserEvent.new
   end
 
   def destroy
