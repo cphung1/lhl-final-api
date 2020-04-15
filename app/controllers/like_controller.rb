@@ -4,6 +4,12 @@ class LikeController < ApplicationController
     render json: like_list
   end
 
+  def show
+    @liker = Like.where(liker_id: params[:id]).pluck(:likee_id)
+    @likee = User.find(@liker)
+    render json: @likee
+  end
+
   def create
     like_person = Like.create(likee_id: PARAMS, liker_id: PARAMS)
 

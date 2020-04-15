@@ -67,8 +67,13 @@ end
 
   Like.create(likee_id: 1, liker_id: 2)
   Like.create(likee_id: 1, liker_id: 3)
+  Like.create(likee_id: 2, liker_id: 3)
+  Like.create(likee_id: 4, liker_id: 5)
+
   Dislike.create(dislikee_id: 1, disliker_id: 4)
+  Dislike.create(dislikee_id: 3, disliker_id: 4)
   Dislike.create(dislikee_id: 1, disliker_id: 5)
+  Dislike.create(dislikee_id: 2, disliker_id: 5)
 
   # p UserEvent.all()
 

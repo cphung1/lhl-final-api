@@ -4,6 +4,13 @@ class DislikeController < ApplicationController
     render json: dislike_list
   end
 
+  def show
+    @disliker = Dislike.where(disliker_id: params[:id]).pluck(:dislikee_id)
+    @dislikee = User.find(@disliker)
+    render json: @dislikee
+
+  end
+
   def create
     dislike_person = Dislike.create(dislikee_id: PARAMS, disliker_id: PARAMS)
 
