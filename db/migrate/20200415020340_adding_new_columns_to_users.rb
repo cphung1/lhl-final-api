@@ -1,7 +1,13 @@
 class AddingNewColumnsToUsers < ActiveRecord::Migration
   def change
-    add_column :users, :likedUsers, :string, array: true, default: []
-    add_column :users, :dislikedUsers, :string, array: true, default: []
-    add_column :users, :likedBy, :string, array: true, default: []
+    create_table :user_likes do |t|
+      t.timestamps null: false
+    end
+    create_table :user_dislikes do |t|
+      t.timestamps null: false
+    end
+    create_table :user_likedby do |t|
+      t.timestamps null: false
+    end
   end
 end

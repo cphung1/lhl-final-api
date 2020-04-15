@@ -21,9 +21,11 @@ Rails.application.routes.draw do
   #get 'users/show' => 'events#show'
   #get 'users/index' => 'users#index'
   
+
   scope '/api' do
-    resources :users, only: [:index, :show]
+    resources :users, only: [:index, :show, :update]
   end
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
