@@ -41,19 +41,21 @@ end
   
  # User.create(name: "", image: open_asset('.jpg'), description: "", location: "", email: "", password: "", birthdate: "")
 
-  User.create(name: "Adam Baynes", image: open_asset('adambaynes.jpg'), description: "I really enjoy trance, dubstep, trap, hardstyle and house music", location: "Vancouver, BC", email: "abaynes@gmail.com", password: "adam", birthdate: "July 2, 1995")
+  User.create(name: "Adam Baynes", image: "https://unsplash.com/photos/EfMqOhtst7E", description: "I really enjoy trance, dubstep, trap, hardstyle and house music", location: "Vancouver, BC", email: "abaynes@gmail.com", password: "adam", birthdate: "July 2, 1995")
 
-  User.create(name: "Miranda Smith", image: open_asset('miranda.jpg'), description: "I am DJ, so come check me out at the main stage!!!", location: "Seattle, WS", email: "spindoctor@gmail.com", password: "dank", birthdate: "Feb 18, 1992")
+  
 
-  User.create(name: "Amy Williams", image: open_asset('amy.jpg'), description: "Basshead for lyffeee :)", location: "San Francisco, CA", email: "dropDat@gmail.com", password: "dropsonly", birthdate: "Mar 21, 1994")
+  User.create(name: "Miranda Smith", image: "https://www.pexels.com/photo/female-dj-playing-mixing-console-3253688/", description: "I am DJ, so come check me out at the main stage!!!", location: "Seattle, WS", email: "spindoctor@gmail.com", password: "dank", birthdate: "Feb 18, 1992")
 
-  User.create(name: "Jim James", image: open_asset('jim.jpg'), description: "Looking for new people to vibe with", location: "Portland, OR", email: "jimbobeans@gmail.com", password: "furhats", birthdate: "April 1, 1997")
+  User.create(name: "Amy Williams", image: "https://www.pexels.com/photo/photo-of-woman-wearing-face-mask-2439002/", description: "Basshead for lyffeee :)", location: "San Francisco, CA", email: "dropDat@gmail.com", password: "dropsonly", birthdate: "Mar 21, 1994")
 
-  User.create(name: "Jessica Swan", image: open_asset('jessica.jpg'), description: "Swipe left if you enjoy lightshows", location: "Victoria, BC", email: "led4gloves@gmailcom", password: "gloving", birthdate: "May 5, 1997")
+  User.create(name: "Jim James", image: "https://www.pexels.com/photo/50mm-dance-dancing-eletronic-1517291/", description: "Looking for new people to vibe with", location: "Portland, OR", email: "jimbobeans@gmail.com", password: "furhats", birthdate: "April 1, 1997")
 
-  User.create(name: "Roxie Clarke", image: open_asset('roxie.jpg') , description: "Good music, good friends, good vibes", location: "Toronto, ON", email: "roxC@gmail.com", password: "vibez", birthdate: "Jun 11, 1991")
+  User.create(name: "Jessica Swan", image: "https://66.media.tumblr.com/9598763ce59b83013045d84e68b24834/tumblr_nuzw0tLrzw1sknefuo1_400.jpg", description: "Swipe left if you enjoy lightshows", location: "Victoria, BC", email: "led4gloves@gmailcom", password: "gloving", birthdate: "May 5, 1997")
 
-  User.create(name: "Kristen Kirby", image: open_asset('kirby.jpg'), description: "I love outdoor events", location: "New York, NY", email: "kirby@gmail.com", password: "kirby", birthdate: "Feb 2, 1997")
+  User.create(name: "Roxie Clarke", image: "https://www.pexels.com/photo/three-women-standing-on-ground-with-crowd-2513605/" , description: "Good music, good friends, good vibes", location: "Toronto, ON", email: "roxC@gmail.com", password: "vibez", birthdate: "Jun 11, 1991")
+
+  User.create(name: "Kristen Kirby", image: "https://www.pexels.com/photo/woman-with-hula-hoop-2513841/", description: "I love outdoor events", location: "New York, NY", email: "kirby@gmail.com", password: "kirby", birthdate: "Feb 2, 1997")
 
   # puts "EVENT for single USER"
 
