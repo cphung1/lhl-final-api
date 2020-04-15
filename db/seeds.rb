@@ -40,8 +40,9 @@ end
   )
   
  # User.create(name: "", image: open_asset('.jpg'), description: "", location: "", email: "", password: "", birthdate: "")
+ #https://unsplash.com/photos/EfMqOhtst7E
 
-  User.create(name: "Adam Baynes", image: "https://unsplash.com/photos/EfMqOhtst7E", description: "I really enjoy trance, dubstep, trap, hardstyle and house music", location: "Vancouver, BC", email: "abaynes@gmail.com", password: "adam", birthdate: "July 2, 1995")
+  User.create(name: "Adam Baynes", image: "/Users/calvinnguyen/lighthouse/lhl-final-api/db/seed_assets/adambaynes.jpg", description: "I really enjoy trance, dubstep, trap, hardstyle and house music", location: "Vancouver, BC", email: "abaynes@gmail.com", password: "adam", birthdate: "July 2, 1995")
 
   
 
