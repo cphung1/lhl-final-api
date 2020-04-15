@@ -65,6 +65,11 @@ end
 
   UserEvent.create(event_id: 4, user_id: 1)
 
+  Like.create(likee_id: 1, liker_id: 2)
+  Like.create(likee_id: 1, liker_id: 3)
+  Dislike.create(dislikee_id: 1, disliker_id: 4)
+  Dislike.create(dislikee_id: 1, disliker_id: 5)
+
   # p UserEvent.all()
 
   #myevent1 = Event.find(1)

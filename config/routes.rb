@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   scope '/api' do
     resources :user_event, only: [:show, :create, :destroy]
+    resources :like, only: [:create, :index]
+    resources :dislike, only: [:create, :index]
   end
 
 
@@ -23,7 +25,7 @@ Rails.application.routes.draw do
   
 
   scope '/api' do
-    resources :users, only: [:index, :show, :update]
+    resources :users, only: [:index, :show]
   end
 
 
