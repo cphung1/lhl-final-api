@@ -44,8 +44,6 @@ end
 
   User.create(name: "Adam Baynes", image: "/Users/calvinnguyen/lighthouse/lhl-final-api/db/seed_assets/adambaynes.jpg", description: "I really enjoy trance, dubstep, trap, hardstyle and house music", location: "Vancouver, BC", email: "abaynes@gmail.com", password: "adam", birthdate: "July 2, 1995" )
 
-  
-
   User.create(name: "Miranda Smith", image: "https://www.pexels.com/photo/female-dj-playing-mixing-console-3253688/", description: "I am DJ, so come check me out at the main stage!!!", location: "Seattle, WS", email: "spindoctor@gmail.com", password: "dank", birthdate: "Feb 18, 1992")
 
   User.create(name: "Amy Williams", image: "https://www.pexels.com/photo/photo-of-woman-wearing-face-mask-2439002/", description: "Basshead for lyffeee :)", location: "San Francisco, CA", email: "dropDat@gmail.com", password: "dropsonly", birthdate: "Mar 21, 1994")
@@ -58,6 +56,12 @@ end
 
   User.create(name: "Kristen Kirby", image: "https://www.pexels.com/photo/woman-with-hula-hoop-2513841/", description: "I love outdoor events", location: "New York, NY", email: "kirby@gmail.com", password: "kirby", birthdate: "Feb 2, 1997")
 
+  User.create(name: "Amanda Sosa", image: "somerandomphoto", description: "Catch me in the moshpits", location: "Kelowna, BC", email: "mysosa@gmail.com", password: "sosa", birthdate: "Dec 19, 1990")
+
+  User.create(name: "Hayley Lindsey", image: "ihavenoidea", description: "Anybody wanna meet up for Marshmellow's set??", location: "Winnipeg, MB", email: "heyheyley@gmail.com", password: "noidea", birthdate: "Nov 3, 1989")
+
+  User.create(name: "Brennan Whitney", image: "dank.asd", description: "Still waiting for the drop.....", location: "Los Angeles, CA", email: "bheart123@gmail.com", password: "heart", birthdate: "Apr 15, 1994")
+  
   # puts "EVENT for single USER"
 
   UserEvent.create(event_id: 1, user_id: 1)
