@@ -2,10 +2,10 @@ class UserEventController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def show
-    puts "1st Test"
-    puts params
-    puts "2ND TEST"
-    puts params["data"]
+    #puts "1st Test"
+    #puts params
+   # puts "2ND TEST"
+    #puts params["data"]
     @user_event = UserEvent.where(user_id: params["id"]).pluck(:event_id)
     @events = Event.find(@user_event)
     render json: @events

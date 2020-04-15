@@ -66,8 +66,8 @@ end
 
   UserEvent.create(event_id: 1, user_id: 1)
   UserEvent.create(event_id: 1, user_id: 2)
-
-  UserEvent.create(event_id: 4, user_id: 1)
+  UserEvent.create(event_id: 4, user_id: 3)
+  UserEvent.create(event_id: 4, user_id: 4)
 
   Like.create(likee_id: 1, liker_id: 2)
   Like.create(likee_id: 1, liker_id: 3)

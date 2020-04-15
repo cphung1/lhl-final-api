@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   #get 'events/show' => 'events#show'
   #get 'events/index' => 'events#index'
 
-
   scope '/api' do
     resources :events, only: [:index, :show]
   end
