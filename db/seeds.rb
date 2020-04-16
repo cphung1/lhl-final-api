@@ -76,13 +76,14 @@ end
   UserEvent.create(event_id: 1, user_id: 10)
 
 
-  Like.create(liker_id: 1, likee_id: 2)
-  Like.create(liker_id: 1, likee_id: 3)
+  # Like.create(liker_id: 1, likee_id: 2)
+  # Like.create(liker_id: 1, likee_id: 3)
   Like.create(liker_id: 3, likee_id: 1)
-  Dislike.create(disliker_id: 1, dislikee_id: 4)
+  # Dislike.create(disliker_id: 1, dislikee_id: 4)
 
-  Match.create(like_user: 1, match_user: 3)
-  Match.create(like_user: 3, match_user: 1)
+  # Match.create(like_user: 1, match_user: 3)
+  # Match.create(like_user: 3, match_user: 1)
+  # Match.create(like_user: 2, match_user: 1)
 
   # Like.create(likee_id: 1, liker_id: 2)
   # Like.create(likee_id: 1, liker_id: 3)
