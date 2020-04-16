@@ -6,21 +6,32 @@ class UsersController < ApplicationController
 
   def show
     @event_id = params[:id]
-    @user_id = params[:user_id]
+    # @user_id = params[:user_id]
+    @user_id = 1
 
-   # @single_event_with_users = UserEvent.where(event_id: @event_id).pluck(:user_id)
-    #@all_users_to_event = User.find(@single_event_with_users)
-    
-    #@dulpicate = @all_users_to_event.where.not(id: @user_id)
+    # Find all users going to a given event 
+    @single_event_with_users = UserEvent.where(event_id: @event_id).pluck(:user_id)
 
-    #@single_event_with_users = UserEvent.where(event_id: @event_id).map(&:single_event_with_users)
-    
-    #render json: @testing
+    # deletes current user from the list of people that are going to the event 
+    @single_event_with_users.delete(@user_id.to_i)
 
+    # gives us an array of id's of users without the current user
+    @all_users_to_event = User.where(id: @single_event_with_users).pluck(:id)
 
-    #render json: @all_users_to_event
+    # output array
+    @output = []
+
+    # checks to see if the user has already been liked or disliked by current user, if not then push them to array 
+    for i in @all_users_to_event do 
+      if !Like.exists?(likee: i) && !Dislike.exists?(dislikee: i)
+        @output.push(i) 
+      end
+    end
+
+    @filtered_users = User.where(id: @output)
+
+    render json: @filtered_users
   end
-
 
 
 end

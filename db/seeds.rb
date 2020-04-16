@@ -66,18 +66,23 @@ end
 
   UserEvent.create(event_id: 1, user_id: 1)
   UserEvent.create(event_id: 1, user_id: 2)
+  UserEvent.create(event_id: 1, user_id: 3)
+  UserEvent.create(event_id: 1, user_id: 4)
   UserEvent.create(event_id: 4, user_id: 3)
   UserEvent.create(event_id: 4, user_id: 4)
 
-  Like.create(likee_id: 1, liker_id: 2)
-  Like.create(likee_id: 1, liker_id: 3)
-  Like.create(likee_id: 2, liker_id: 3)
-  Like.create(likee_id: 4, liker_id: 5)
+  Like.create(liker_id: 1, likee_id: 2)
+  Dislike.create(disliker_id: 1, dislikee_id: 3)
 
-  Dislike.create(dislikee_id: 1, disliker_id: 4)
-  Dislike.create(dislikee_id: 3, disliker_id: 4)
-  Dislike.create(dislikee_id: 1, disliker_id: 5)
-  Dislike.create(dislikee_id: 2, disliker_id: 5)
+  # Like.create(likee_id: 1, liker_id: 2)
+  # Like.create(likee_id: 1, liker_id: 3)
+  # Like.create(likee_id: 2, liker_id: 3)
+  # Like.create(likee_id: 4, liker_id: 5)
+
+  # Dislike.create(dislikee_id: 1, disliker_id: 4)
+  # Dislike.create(dislikee_id: 3, disliker_id: 4)
+  # Dislike.create(dislikee_id: 1, disliker_id: 5)
+  # Dislike.create(dislikee_id: 2, disliker_id: 5)
 
   # p UserEvent.all()
 
