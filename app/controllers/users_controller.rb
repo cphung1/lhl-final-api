@@ -6,8 +6,7 @@ class UsersController < ApplicationController
 
   def show
     @event_id = params[:id]
-    # @user_id = params[:user_id]
-    @user_id = 1
+    @user_id = params[:user_id]
 
     # Find all users going to a given event 
     @single_event_with_users = UserEvent.where(event_id: @event_id).pluck(:user_id)
