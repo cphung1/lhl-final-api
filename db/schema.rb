@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200415044408) do
+ActiveRecord::Schema.define(version: 20200416031359) do
 
   create_table "dislikes", force: :cascade do |t|
     t.datetime "created_at",  null: false
@@ -35,6 +35,13 @@ ActiveRecord::Schema.define(version: 20200415044408) do
     t.datetime "updated_at", null: false
     t.integer  "liker_id"
     t.integer  "likee_id"
+  end
+
+  create_table "matches", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "like_user"
+    t.integer  "match_user"
   end
 
   create_table "user_events", force: :cascade do |t|

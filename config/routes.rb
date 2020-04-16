@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :user_event, only: [:show, :create, :destroy]
     resources :like, only: [:create, :index, :show]
     resources :dislike, only: [:create, :index, :show]
+    resources :match, only: [:create, :show, :index]
   end
 
 
