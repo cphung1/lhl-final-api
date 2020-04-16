@@ -1,4 +1,6 @@
 class LikeController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def index
     like_list = Like.all()
     render json: like_list
@@ -11,12 +13,21 @@ class LikeController < ApplicationController
   end
 
   def create
-    like_person = Like.create(likee_id: PARAMS, liker_id: PARAMS)
+    @like_person = Like.create(likee_id: likee_params, liker_id: liker_params)
 
-    if like_person 
-      render json: like_person
+    if @like_person 
+      render json: @like_person
     else
       puts "cannot like"
     end
+  end
+
+  private 
+  def likee_params
+    params['data']['likee_id']
+  end
+
+  def liker_params
+    params['data']['liker_id']
   end
 end
