@@ -32,5 +32,9 @@ class UsersController < ApplicationController
     render json: @filtered_users
   end
 
+  def myprofile
+    @user_id = User.where(id: params[:id])
 
+    render json: @user_id
+  end
 end
