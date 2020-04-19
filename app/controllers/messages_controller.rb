@@ -8,12 +8,18 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.create(body: message_params, user_id: current_user_params, conversation_id: conversation_params)
-    
-    puts params
+    message = Message.new(body: message_params, user_id: current_user_params, conversation_id: conversation_params)
 
-    if @message 
-      render json: @message
+    # if @message 
+    #   render json: @message
+    # end
+
+    if message.save 
+      ActionCable.server.broadcast 'messages',
+        body: message.body,
+        user_id: message.user_id,
+        conversation_id: message.conversation_id
+      head :ok
     end
   end
 
