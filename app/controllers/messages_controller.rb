@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def show
-    @message = Message.where(conversation_id: 1)
+    @message = Message.where(conversation_id: params[:id])
 
     render json: @message
   end

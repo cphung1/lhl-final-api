@@ -93,6 +93,9 @@ end
   Message.create(user_id: 3, body: "Not much", conversation_id: 1)
   Message.create(user_id: 1, body: "cool", conversation_id: 1)
 
+  Message.create(user_id: 1, body: "Helllloooooo", conversation_id: 2)
+  Message.create(user_id: 3, body: "Hii", conversation_id: 2)
+
 
   # Match.create(like_user: 1, match_user: 3)
   # Match.create(like_user: 3, match_user: 1)
