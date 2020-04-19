@@ -8,6 +8,7 @@ class MatchController < ApplicationController
     @current_user = params[:id]
     @matches = Match.where(like_user: @current_user).pluck(:match_user)
     @display_matches = User.where(id: @matches)
+    
     render json: @display_matches
   end
 

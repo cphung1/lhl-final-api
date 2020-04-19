@@ -17,7 +17,7 @@ class ConversationsController < ApplicationController
 
 
   def create
-    @conversation = Conversation.create(sender_id: current_user, recipient_id: user_params)
+    @conversation = Conversation.create(sender_id: likee_params, recipient_id: liker_params)
 
     if @conversation
       # ActionCable.server.broadcast 'conversations',
@@ -27,4 +27,12 @@ class ConversationsController < ApplicationController
     end
   end
 
+  private 
+  def likee_params
+    params['data']['likee_id']
+  end
+
+  def liker_params
+    params['data']['liker_id']
+  end
 end

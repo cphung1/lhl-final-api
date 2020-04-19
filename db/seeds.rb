@@ -86,6 +86,9 @@ end
   Match.create(like_user: 3, match_user: 1)
   Match.create(like_user: 5, match_user: 1)
   Match.create(like_user: 1, match_user: 5)
+
+  
+  Like.create(liker_id: 4, likee_id: 1)
   # Dislike.create(disliker_id: 1, dislikee_id: 4)
   Conversation.create(sender_id: 1, recipient_id: 3)
   Conversation.create(sender_id: 5, recipient_id: 1)
