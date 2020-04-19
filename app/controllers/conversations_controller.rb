@@ -17,13 +17,14 @@ class ConversationsController < ApplicationController
 
 
   def create
-    @conversation = Conversation.create(sender_id: likee_params, recipient_id: liker_params)
+    conversation = Conversation.new(sender_id: likee_params, recipient_id: liker_params)
 
-    if @conversation
-      # ActionCable.server.broadcast 'conversations',
-      render json: @conversation
-    else
-      puts "error"
+    if conversation.save
+      ActionCable.server.broadcast 'conversations',
+        sender_id: conversation.sender_id,
+        recipient_id: conversation.recipient_id
+      head :ok
+      # render json: @conversation
     end
   end
 
