@@ -8,8 +8,11 @@ scope '/api' do
   resources :like, only: [:create, :index, :show]
   resources :dislike, only: [:create, :index, :show]
   resources :match, only: [:create, :show, :index]
+  resources :conversations, only: [:show, :create]
+  resources :messages, only: [:show, :create]
 end
 
+mount ActionCable.server => '/cable'
 
 #get 'events/show' => 'events#show'
 #get 'events/index' => 'events#index'

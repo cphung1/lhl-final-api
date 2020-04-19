@@ -12,4 +12,7 @@ class User < ActiveRecord::Base
   has_many :dislikee, through: :dislikers
   has_many :dislikee, foreign_key: :dislikee_id, class_name: 'Dislike'
   has_many :dislikers, through: :dislikee
+
+  has_many :messages
+  has_many :conversations, foreign_key: :sender_id
 end

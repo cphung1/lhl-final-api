@@ -81,6 +81,7 @@ GEM
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     pg (1.2.3)
+    puma (3.12.4)
     rack (2.2.2)
     rack-cors (1.0.6)
       rack (>= 1.6.0)
@@ -165,6 +166,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   pg (~> 1.2.3)
+  puma (~> 3.0)
   rack-cors
   rails (>= 5.0.0.rc2, < 5.1)
   sass-rails (~> 5.0)
