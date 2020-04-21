@@ -26,7 +26,7 @@ end
 
 
 scope '/api' do
-  resources :users, only: [:index, :show]
+  resources :users, only: [:index, :show, :update]
 end
 
 get 'users/:id' => 'users#myprofile'
